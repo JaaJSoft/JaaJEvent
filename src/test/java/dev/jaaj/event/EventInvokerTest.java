@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class EventInvokerTest {
-    private final String test = "aaaa";
+    private final static String test = "aaaa";
     private final EventInvoker<TestEvent> testEventEventInvoker = new EventInvoker<>();
     private String out;
 
