@@ -17,4 +17,12 @@ public class EventInvoker<E extends JaaJEvent<?>> {
     public void invoke(E event) {
         eventListenerList.forEach(eEventHandler -> eEventHandler.handle(event));
     }
+
+    public int getNumberOfListeners() {
+        return eventListenerList.size();
+    }
+
+    public boolean hasListener() {
+        return getNumberOfListeners() != 0;
+    }
 }
