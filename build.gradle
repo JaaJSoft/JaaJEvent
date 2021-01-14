@@ -86,4 +86,8 @@ release {
     tagCommitMessage = '[Release] - creating tag: '
     newVersionCommitMessage = '[Release] - new version commit: '
     pushReleaseVersionBranch = true
+    git {
+        pushToBranchPrefix = 'release-'
+    }
+
 }
