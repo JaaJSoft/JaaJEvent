@@ -4,11 +4,19 @@ name: default
 steps:
   - name: test
     image: gradle:jdk13
-    environment:
-      REPO_USER:
-        from_secret: REPO_USER
-      REPO_PASSWORD:
-        from_secret: REPO_PASSWORD
     commands:
       - gradle assemble
       - gradle check
+  - name: publish
+    image: gradle:jdk13
+      environment:
+        REPO_USER:
+          from_secret: REPO_USER
+        REPO_PASSWORD:
+          from_secret: REPO_PASSWORD
+      commands:
+        - gradle assemble
+        - gradle publish
+      when:
+        event:
+          - tag
