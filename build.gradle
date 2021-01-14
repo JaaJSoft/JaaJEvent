@@ -65,8 +65,8 @@ publishing {
     repositories {
         maven {
             credentials {
-                username repoUser
-                password repoPassword
+                username System.getenv('REPO_USER')
+                password System.getenv('REPO_PASSWORD')
             }
             def releasesRepoUrl = "https://nexus.jaaj.dev/repository/maven-releases/"
             def snapshotsRepoUrl = "https://nexus.jaaj.dev/repository/maven-snapshots/"
