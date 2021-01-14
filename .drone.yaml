@@ -1,0 +1,9 @@
+kind: pipeline
+type: kubernetes
+name: default
+steps:
+  - name: test
+    image: gradle:jdk13
+    commands:
+      - gradle assemble
+      - gradle check
