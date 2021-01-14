@@ -21,7 +21,6 @@ plugins {
 }
 
 group 'dev.jaaj'
-version '0.1.1'
 
 repositories {
     mavenCentral()
