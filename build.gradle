@@ -85,8 +85,4 @@ release {
     preTagCommitMessage = '[Release] - pre tag commit: '
     tagCommitMessage = '[Release] - creating tag: '
     newVersionCommitMessage = '[Release] - new version commit: '
-    git {
-        pushToBranchPrefix = 'release-'
-    }
-
 }
