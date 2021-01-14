@@ -15,7 +15,6 @@
  */
 
 plugins {
-    id 'net.researchgate.release' version '2.8.1'
     id 'java-library'
     id "maven-publish"
 }
@@ -79,10 +78,4 @@ javadoc {
     if(JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
-}
-
-release {
-    preTagCommitMessage = '[Release] - pre tag commit: '
-    tagCommitMessage = '[Release] - creating tag: '
-    newVersionCommitMessage = '[Release] - new version commit: '
 }
