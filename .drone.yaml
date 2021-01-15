@@ -7,6 +7,7 @@ steps:
     commands:
       - gradle assemble
       - gradle check
+
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
     settings:
@@ -15,6 +16,7 @@ steps:
       sonar_token:
         from_secret: sonar_token
     usingProperties: true
+
   - name: publish
     image: gradle:jdk13
     environment:
