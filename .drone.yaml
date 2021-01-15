@@ -7,11 +7,6 @@ steps:
     commands:
       - gradle assemble
       - gradle check
-      - touch test
-  - name: test_file
-    image: gradle:jdk13
-    commands:
-      - ls
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
     settings:
