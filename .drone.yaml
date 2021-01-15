@@ -9,6 +9,8 @@ steps:
       - gradle check
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
+    commands:
+      - ./gradlew assemble
     settings:
       sonar_host:
         from_secret: sonar_host
