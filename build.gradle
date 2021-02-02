@@ -19,7 +19,7 @@ plugins {
     id "maven-publish"
 }
 
-group 'dev.jaaj'
+group 'dev.jaaj.event'
 
 repositories {
     mavenCentral()
