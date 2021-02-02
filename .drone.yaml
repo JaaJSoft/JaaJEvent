@@ -28,5 +28,7 @@ steps:
       - gradle assemble
       - gradle publish
     when:
+      branch:
+        - master
       event:
         - tag
